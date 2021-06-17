@@ -1,0 +1,10 @@
+{
+  "name": "slate-v0",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@shopify/slate-tools": "0.14.0"
+  },
+  "dependencies": {
+    "@shopify/themekit": "^1.1.8"
+  }
+}
