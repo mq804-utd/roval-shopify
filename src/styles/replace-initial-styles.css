@@ -48,3 +48,9 @@ button {
     display: inline-block;
     font-size: 16px;
 }
+.icon {
+	fill: initial;
+}
+.page-container {
+	flex-grow: 1;
+}
