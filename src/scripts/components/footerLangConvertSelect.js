@@ -1,10 +1,6 @@
-const footerLangSelect = '.js-footer-lang_select-single'
-function formatState (state) {
-    if (!state.id) return state.text
-    const baseUrl = "icons/flags";
-    return $('<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" style="width: 31px"/> ' + state.text + '</span>')
-}
 $(document).ready(function() {
+	const footerLangSelect = '.js-footer-lang_select-single'
+
     $(footerLangSelect).select2({
         width: '50px',
         templateResult: formatState,
@@ -12,4 +8,9 @@ $(document).ready(function() {
         minimumResultsForSearch : Infinity,
         dropdownPosition: 'above',
     })
+
+	function formatState (state) {
+		if (!state.id) return state.text
+		return $('<span><img src="' + state.element.dataset.flagUrl + '" class="img-flag" style="width: 31px"/> ' + state.text + '</span>')
+	}
 });
